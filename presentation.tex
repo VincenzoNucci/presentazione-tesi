@@ -3,65 +3,38 @@
 \usepackage[utf8x]{inputenc}
 \usepackage{listings}
 \usepackage{subfig}
-\title{LS Genio Platform}
-\subtitle{Piattaforma per il monitoraggio di macchine utensili con integrazione a software ERP Microsoft Dynamics NAV}
-\author{Vincenzo Nucci e Matteo Tiberi}
+%\title{LS Genio Platform}
+%\subtitle{Piattaforma per il monitoraggio di macchine utensili con integrazione a software ERP Microsoft Dynamics NAV}
+%\author{Vincenzo Nucci e Matteo Tiberi}
 %\author{Matteo Tiberi}
-\institute{Università di Camerino}
+%\institute{Università di Camerino}
 \date{}
 \begin{document}
 	
 	\begin{frame}
 	\centering
-	\includegraphics[scale=0.7]{images/stemma.png}\par
+	\includegraphics[scale=0.25]{images/frontespizio-beamer.png}\par
 	\usebeamertemplate{title page}
 \end{frame}
 
-
 \begin{frame}
-\frametitle{LS Genio Platform}
-\begin{itemize}
-	\item Espone servizi REST per letture di sensori
-	\begin{itemize}
-		\item Ultima lettura di un sensore
-		\item Letture di una certa settimana
-		\item Letture di un certo mese
-		\item Letture di determinati campi dei sensori
-	\end{itemize}
-	\item Valori dei sensori letti dai PLC
-	\begin{itemize}
-		\item Convertiti in record e inseriti nel database
-	\end{itemize}
-	\item Servizio di sottoscrizione con notifiche PUSH
-	\begin{itemize}
-		\item Debolmente accoppiato grazie ad Apache ActiveMQ
-	\end{itemize}
-	\item Integra il servizio di sottoscrizione con Dynamics NAV
-	\begin{itemize}
-		\item Utilizzo dei web services SOAP offerti da NAV
-	\end{itemize}
-	\item Indipendente da sorgenti dati e formato dei dati
-	\begin{itemize}
-		\item Grazie a classi astratte, interfacce e Apache Avro
-	\end{itemize}
-	
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{LS Genio Platform cont.}
-	\begin{itemize}
-		\item Interfaccia web
+	\frametitle{Obiettivi}
 		\begin{itemize}
-			\item Pagina per la registrazione delle applicazioni
-			\item Pagina per la gestione delle richieste
-			\item Pagina per la gestione dei servizi attivi per gli utenti
+			\item Piattaforma REST indipendente da sorgenti dati
+			\begin{itemize}
+				\item Autenticazione tramite token
+				\item Interfaccia web
+			\end{itemize}
+			\item Servizio di sottoscrizione "subscribe"
+			\begin{itemize}
+				\item Notifica dei messaggi PUSH
+			\end{itemize}
+			\item Integrazione dei servizi con NAV
+			\item Servizio di monitoraggio dei dati
+			\begin{itemize}
+				\item Controllo valore oltre soglia
+			\end{itemize}
 		\end{itemize}
-	\item Servizio di monitoraggio dei dati
-	\begin{itemize}
-		\item Controllo valore oltre soglia
-	\end{itemize}
-	\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -85,42 +58,12 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Tabella \textit{Requests} per la gestione delle richieste di abilitazione}
-\includegraphics[width=1\textwidth]{images/DBPlatform2.png}
-\end{frame}
-
-\begin{frame}
-\frametitle{Pagina web per la gestione delle richieste}
-\includegraphics[width=1\textwidth]{images/managePagePlatform.png}
-\end{frame}
-
-\begin{frame}
-\frametitle{Tabella \textit{Subscriptions} per la gestione delle applicazioni abilitate}
-\includegraphics[width=1\textwidth]{images/DBPlatform3.png}
-\end{frame}
-
-\begin{frame}
-\frametitle{Pagina web di gestione dei servizi utente}
-\includegraphics[width=1\textwidth]{images/UserSubscriptionsPlatform.png}
-\end{frame}
-
-\begin{frame}
-\frametitle{Pagina web per il grafico}
-\includegraphics[width=1\textwidth]{images/grafico-zk.png}
-\end{frame}
-
-\begin{frame}
-\frametitle{Pagina web per il monitoraggio della soglia}
-\includegraphics[width=1\textwidth]{images/pagina-monitoraggio-web.png}
-\end{frame}
-
-\begin{frame}
 \frametitle{Pagina web catalogo Smart Object}
 \includegraphics[width=1\textwidth]{images/SmartObjectsPlatform.png}
 \end{frame}
 
 \begin{frame}
-\frametitle{Esempio di un servizio}
+\frametitle{Esempio di un servizio - getlastmeasure}
 \includegraphics[width=1\textwidth]{images/getlastmeasure.png}
 \end{frame}
 
@@ -130,57 +73,13 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Subscribe Rule}
-\begin{itemize}
-\item Messaggio JSON che il servizio di sottoscrizione si aspetta di ricevere
-\item L'utente specifica la condizione
-\begin{itemize}
-\item Nome e IP applicazione
-\item Coda o topic di ActiveMQ
-\item Rule Record
-\begin{itemize}
-\item Nome tabella da interrogare
-\item Lista dei campi dei quali monitorarne i cambiamenti
-\item Espressione CRON
-\item Clausola where
-
-\end{itemize}
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Clausola where}
-\begin{itemize}
-\item Condition
-\begin{itemize}
-\item Insieme di oggetti Avro annidati
-\end{itemize}
-\item Formula
-\begin{itemize}
-\item Semplice stringa (per NAV)
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Albero della condition}
-\includegraphics[width=1\textwidth]{images/strutturaquerytree.png}
-\end{frame}
-
-\begin{frame}
 \frametitle{Subscribe Rule di una applicazione}
 \includegraphics[width=0.6\textwidth]{images/subscribe-json-1.png}
 \end{frame}
 
 \begin{frame}
-\frametitle{Subscribe Rule di NAV}
-\includegraphics[width=0.6\textwidth]{images/subscribe-json-2.png}
-\end{frame}
-
-\begin{frame}
-\frametitle{Tabella \textit{Rules} per la gestione delle regole di subscribe}
-\includegraphics[width=1\textwidth]{images/DBPlatform1.png}
+\frametitle{Albero della condition}
+\includegraphics[width=1\textwidth]{images/strutturaquerytree.png}
 \end{frame}
 
 \begin{frame}
@@ -221,20 +120,55 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Estratto del metodo getDataFromDbToSensorList}
-\begin{figure}%
-	\centering
-	\subfloat{{\includegraphics[width=8cm]{images/getsensor1.png} }}%
-	\qquad
-	\subfloat{{\includegraphics[width=8cm]{images/getsensor2.png} }}%
-	%
-	%
-\end{figure}
+\frametitle{Pagina web per il grafico}
+\includegraphics[width=1\textwidth]{images/grafico-zk.png}
 \end{frame}
 
 \begin{frame}
 \frametitle{Codice Job Flink}
 \includegraphics[width=1\textwidth]{images/flink-job.png}
+\end{frame}
+
+\begin{frame}
+\frametitle{Difficoltà incontrate}
+\begin{itemize}
+	\item Integrazione subscribe con NAV
+	\begin{itemize}
+		\item Utilizzo Web Service SOAP
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tecnologie utilizzate}
+\begin{itemize}
+	\item Java
+	\item Framework Jersey e Grizzly
+	\item Apache Avro
+	\item Apache ActiveMQ
+	\item Framework ZK
+	\item Apache Flink
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Risultati raggiunti}
+\begin{itemize}
+	\item Piattaforma indipendente
+	\begin{itemize}
+		\item Classi astratte e interfacce
+		\item Database SQLite per autenticazione token
+	\end{itemize}
+	\item Servizio subscribe debolmente accoppiato
+	\begin{itemize}
+		\item Tramite message broker
+	\end{itemize}
+	\item Servizio monitoraggio dei dati
+	\begin{itemize}
+		\item Grafico per visualizzare andamento
+		\item Apache Flink per controllo soglia
+	\end{itemize}
+\end{itemize}
 \end{frame}
 
 %-------------------------inizio client-----------------------------
