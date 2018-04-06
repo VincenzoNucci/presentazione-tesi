@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.13)  5 APR 2018 22:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.13)  6 APR 2018 14:19
 entering extended mode
 **./presentation.tex
 (presentation.tex
@@ -1015,7 +1015,7 @@ Package pdftex.def Info: images/getlastmeasure.png  used on input line 68.
 File: images/Postman1-corretto.png Graphic file (type png)
 <use images/Postman1-corretto.png>
 Package pdftex.def Info: images/Postman1-corretto.png  used on input line 73.
-(pdftex.def)             Requested size: 205.37926pt x 162.6289pt.
+(pdftex.def)             Requested size: 273.83728pt x 216.84457pt.
 
 [9
 
@@ -1079,7 +1079,7 @@ Package pdftex.def Info: images/sensordata1.png  used on input line 115.
 File: images/sensordata2.png Graphic file (type png)
 <use images/sensordata2.png>
 Package pdftex.def Info: images/sensordata2.png  used on input line 115.
-(pdftex.def)             Requested size: 142.26378pt x 186.8138pt.
+(pdftex.def)             Requested size: 170.71652pt x 224.1818pt.
 
 Overfull \vbox (19.71294pt too high) detected at line 115
  []
@@ -1087,32 +1087,42 @@ Overfull \vbox (19.71294pt too high) detected at line 115
 [16
 
  <./images/sensordata1.png> <./images/sensordata2.png>]
-<images/sensordataannotation.png, id=459, 588.69937pt x 423.83344pt>
-File: images/sensordataannotation.png Graphic file (type png)
-<use images/sensordataannotation.png>
-Package pdftex.def Info: images/sensordataannotation.png  used on input line 12
-0.
-(pdftex.def)             Requested size: 273.83728pt x 197.15164pt.
- [17
+<images/annotazione-non-avro.png, id=459, 293.59688pt x 382.42876pt>
+File: images/annotazione-non-avro.png Graphic file (type png)
+<use images/annotazione-non-avro.png>
+Package pdftex.def Info: images/annotazione-non-avro.png  used on input line 12
+7.
+(pdftex.def)             Requested size: 142.26378pt x 185.30849pt.
+<images/annotazione-avro.png, id=460, 451.6875pt x 594.72188pt>
+File: images/annotazione-avro.png Graphic file (type png)
+<use images/annotazione-avro.png>
+Package pdftex.def Info: images/annotazione-avro.png  used on input line 127.
+(pdftex.def)             Requested size: 170.71652pt x 224.78065pt.
 
- <./images/sensordataannotation.png>]
-<images/grafico-zk.png, id=486, 1028.34187pt x 560.0925pt>
+Overfull \vbox (0.17416pt too high) detected at line 127
+ []
+
+[17
+
+ <./images/annotazione-non-avro.png> <./images/annotazione-avro.png>]
+<images/grafico-zk.png, id=488, 1028.34187pt x 560.0925pt>
 File: images/grafico-zk.png Graphic file (type png)
 <use images/grafico-zk.png>
-Package pdftex.def Info: images/grafico-zk.png  used on input line 125.
+Package pdftex.def Info: images/grafico-zk.png  used on input line 132.
 (pdftex.def)             Requested size: 342.2953pt x 186.43779pt.
- [18
+
+[18
 
  <./images/grafico-zk.png>]
-<images/flink-job.png, id=514, 531.48563pt x 252.19218pt>
+<images/flink-job.png, id=516, 531.48563pt x 252.19218pt>
 File: images/flink-job.png Graphic file (type png)
 <use images/flink-job.png>
-Package pdftex.def Info: images/flink-job.png  used on input line 130.
+Package pdftex.def Info: images/flink-job.png  used on input line 137.
 (pdftex.def)             Requested size: 342.2953pt x 162.4222pt.
  [19
 
- <./images/flink-job.png>] ("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\uni-0.de
-f"
+ <./images/flink-job.png>]
+("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 ) [20
 
@@ -1120,149 +1130,150 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 
 ] [22
 
-]
-[23
+] [23
 
-] [24
+]
+[24
 
 ] [25
 
 ]
-<images/ClassLibrary3v2part1.png, id=699, 683.55376pt x 724.95844pt>
+<images/ClassLibrary3v2part1.png, id=701, 683.55376pt x 724.95844pt>
 File: images/ClassLibrary3v2part1.png Graphic file (type png)
 <use images/ClassLibrary3v2part1.png>
-Package pdftex.def Info: images/ClassLibrary3v2part1.png  used on input line 26
-8.
+Package pdftex.def Info: images/ClassLibrary3v2part1.png  used on input line 27
+5.
 (pdftex.def)             Requested size: 222.48985pt x 235.96268pt.
  [26
 
  <./images/ClassLibrary3v2part1.png>]
-<images/ClassLibrary3v2part2.png, id=727, 683.55376pt x 724.95844pt>
+<images/ClassLibrary3v2part2.png, id=729, 683.55376pt x 724.95844pt>
 File: images/ClassLibrary3v2part2.png Graphic file (type png)
 <use images/ClassLibrary3v2part2.png>
-Package pdftex.def Info: images/ClassLibrary3v2part2.png  used on input line 27
-3.
+Package pdftex.def Info: images/ClassLibrary3v2part2.png  used on input line 28
+0.
 (pdftex.def)             Requested size: 222.48985pt x 235.96268pt.
  [27
 
  <./images/ClassLibrary3v2part2.png>]
-<images/NAVDevelopmentEnvironment.png, id=755, 1022.31938pt x 548.0475pt>
+<images/NAVDevelopmentEnvironment.png, id=757, 1022.31938pt x 548.0475pt>
 File: images/NAVDevelopmentEnvironment.png Graphic file (type png)
 <use images/NAVDevelopmentEnvironment.png>
 Package pdftex.def Info: images/NAVDevelopmentEnvironment.png  used on input li
-ne 278.
+ne 285.
 (pdftex.def)             Requested size: 342.2953pt x 183.49878pt.
  [28
 
  <./images/NAVDevelopmentEnvironment.png>]
-<images/MachineAssignmentList2.png, id=782, 1028.34187pt x 548.0475pt>
+<images/MachineAssignmentList2.png, id=784, 1028.34187pt x 548.0475pt>
 File: images/MachineAssignmentList2.png Graphic file (type png)
 <use images/MachineAssignmentList2.png>
 Package pdftex.def Info: images/MachineAssignmentList2.png  used on input line 
-295.
+302.
 (pdftex.def)             Requested size: 342.2953pt x 182.42838pt.
  [29
 
  <./images/MachineAssignmentList2.png>]
-<images/MachineReadingList.png, id=810, 1028.34187pt x 547.2947pt>
+<images/MachineReadingList.png, id=812, 1028.34187pt x 547.2947pt>
 File: images/MachineReadingList.png Graphic file (type png)
 <use images/MachineReadingList.png>
-Package pdftex.def Info: images/MachineReadingList.png  used on input line 313.
+Package pdftex.def Info: images/MachineReadingList.png  used on input line 320.
 
 (pdftex.def)             Requested size: 342.2953pt x 182.1778pt.
  [30
 
  <./images/MachineReadingList.png>]
-<images/PowerBI.png, id=837, 1028.34187pt x 530.73282pt>
+<images/PowerBI.png, id=839, 1028.34187pt x 530.73282pt>
 File: images/PowerBI.png Graphic file (type png)
 <use images/PowerBI.png>
-Package pdftex.def Info: images/PowerBI.png  used on input line 318.
+Package pdftex.def Info: images/PowerBI.png  used on input line 325.
 (pdftex.def)             Requested size: 342.2953pt x 176.66486pt.
  [31
 
  <./images/PowerBI.png>]
-<images/ReportWEB.png, id=865, 1028.34187pt x 547.2947pt>
+<images/ReportWEB.png, id=867, 1028.34187pt x 547.2947pt>
 File: images/ReportWEB.png Graphic file (type png)
 <use images/ReportWEB.png>
-Package pdftex.def Info: images/ReportWEB.png  used on input line 323.
+Package pdftex.def Info: images/ReportWEB.png  used on input line 330.
 (pdftex.def)             Requested size: 342.2953pt x 182.1778pt.
  [32
 
  <./images/ReportWEB.png>]
-<images/NAVServiziWeb.png, id=892, 1028.34187pt x 547.2947pt>
+<images/NAVServiziWeb.png, id=894, 1028.34187pt x 547.2947pt>
 File: images/NAVServiziWeb.png Graphic file (type png)
 <use images/NAVServiziWeb.png>
-Package pdftex.def Info: images/NAVServiziWeb.png  used on input line 343.
+Package pdftex.def Info: images/NAVServiziWeb.png  used on input line 350.
 (pdftex.def)             Requested size: 342.2953pt x 182.1778pt.
  [33
 
  <./images/NAVServiziWeb.png>]
-<images/NAVSubscriptionPage.png, id=919, 1028.34187pt x 547.2947pt>
+<images/NAVSubscriptionPage.png, id=921, 1028.34187pt x 547.2947pt>
 File: images/NAVSubscriptionPage.png Graphic file (type png)
 <use images/NAVSubscriptionPage.png>
-Package pdftex.def Info: images/NAVSubscriptionPage.png  used on input line 349
+Package pdftex.def Info: images/NAVSubscriptionPage.png  used on input line 356
 .
 (pdftex.def)             Requested size: 342.2953pt x 182.1778pt.
+
 [34
 
  <./images/NAVSubscriptionPage.png>] [35
 
 ]
-<images/AltreTabelleAnnotazioniMOD4.png, id=972, 1245.59471pt x 443.53941pt>
+<images/AltreTabelleAnnotazioniMOD4.png, id=974, 1245.59471pt x 443.53941pt>
 File: images/AltreTabelleAnnotazioniMOD4.png Graphic file (type png)
 <use images/AltreTabelleAnnotazioniMOD4.png>
 Package pdftex.def Info: images/AltreTabelleAnnotazioniMOD4.png  used on input 
-line 370.
+line 377.
 (pdftex.def)             Requested size: 342.2953pt x 121.88911pt.
  [36
 
  <./images/AltreTabelleAnnotazioniMOD4.png>]
-<images/TemperatureXML2.png, id=999, 529.98pt x 342.5297pt>
+<images/TemperatureXML2.png, id=1001, 529.98pt x 342.5297pt>
 File: images/TemperatureXML2.png Graphic file (type png)
 <use images/TemperatureXML2.png>
-Package pdftex.def Info: images/TemperatureXML2.png  used on input line 390.
+Package pdftex.def Info: images/TemperatureXML2.png  used on input line 397.
 (pdftex.def)             Requested size: 342.2953pt x 221.23048pt.
  [37
 
  <./images/TemperatureXML2.png>]
-<images/TemperatureJSON.png, id=1027, 479.54156pt x 204.765pt>
+<images/TemperatureJSON.png, id=1029, 479.54156pt x 204.765pt>
 File: images/TemperatureJSON.png Graphic file (type png)
 <use images/TemperatureJSON.png>
-Package pdftex.def Info: images/TemperatureJSON.png  used on input line 395.
+Package pdftex.def Info: images/TemperatureJSON.png  used on input line 402.
 (pdftex.def)             Requested size: 342.2953pt x 146.16214pt.
  [38
 
  <./images/TemperatureJSON.png>]
-<images/TempExample2.png, id=1054, 871.49118pt x 1025.95059pt>
+<images/TempExample2.png, id=1056, 871.49118pt x 1025.95059pt>
 File: images/TempExample2.png Graphic file (type png)
 <use images/TempExample2.png>
-Package pdftex.def Info: images/TempExample2.png  used on input line 408.
+Package pdftex.def Info: images/TempExample2.png  used on input line 415.
 (pdftex.def)             Requested size: 193.39767pt x 227.66667pt.
-<images/celsius.png, id=1055, 545.56764pt x 546.98471pt>
+<images/celsius.png, id=1057, 545.56764pt x 546.98471pt>
 File: images/celsius.png Graphic file (type png)
 <use images/celsius.png>
-Package pdftex.def Info: images/celsius.png  used on input line 408.
+Package pdftex.def Info: images/celsius.png  used on input line 415.
 (pdftex.def)             Requested size: 142.26378pt x 142.62997pt.
 
-Overfull \vbox (166.69016pt too high) detected at line 408
+Overfull \vbox (166.69016pt too high) detected at line 415
  []
 
 [39
 
  <./images/TempExample2.png> <./images/celsius.png>]
-<images/ExtrusorTemperature2.png, id=1082, 1028.34187pt x 478.78876pt>
+<images/ExtrusorTemperature2.png, id=1084, 1028.34187pt x 478.78876pt>
 File: images/ExtrusorTemperature2.png Graphic file (type png)
 <use images/ExtrusorTemperature2.png>
-Package pdftex.def Info: images/ExtrusorTemperature2.png  used on input line 42
-5.
+Package pdftex.def Info: images/ExtrusorTemperature2.png  used on input line 43
+2.
 (pdftex.def)             Requested size: 342.2953pt x 159.37425pt.
  [40
 
  <./images/ExtrusorTemperature2.png>]
-<images/JSONRestituito.png, id=1109, 778.40813pt x 317.68687pt>
+<images/JSONRestituito.png, id=1111, 778.40813pt x 317.68687pt>
 File: images/JSONRestituito.png Graphic file (type png)
 <use images/JSONRestituito.png>
-Package pdftex.def Info: images/JSONRestituito.png  used on input line 430.
+Package pdftex.def Info: images/JSONRestituito.png  used on input line 437.
 (pdftex.def)             Requested size: 342.2953pt x 139.70024pt.
  [41
 
@@ -1278,19 +1289,19 @@ Package pdftex.def Info: images/JSONRestituito.png  used on input line 430.
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 453.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 453.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 460.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 460.
  (presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 453.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 453.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 460.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 460.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 20519 strings out of 493305
- 380579 string characters out of 3138883
+ 20524 strings out of 493305
+ 380726 string characters out of 3138883
  452323 words of memory out of 3000000
- 23527 multiletter control sequences out of 15000+200000
+ 23531 multiletter control sequences out of 15000+200000
  8748 words of font info for 32 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,15n,57p,800b,762s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1298,9 +1309,9 @@ Here is how much of TeX's memory you used:
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on presentation.pdf (42 pages, 1681330 bytes).
+Output written on presentation.pdf (42 pages, 1690356 bytes).
 PDF statistics:
- 1196 PDF objects out of 1200 (max. 8388607)
+ 1198 PDF objects out of 1200 (max. 8388607)
  85 named destinations out of 1000 (max. 500000)
- 224 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 229 words of extra memory for PDF output out of 10000 (max. 10000000)
 
