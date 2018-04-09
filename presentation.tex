@@ -18,87 +18,370 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Obiettivi}
+	\frametitle{Contenuti}
+	\begin{itemize}
+		\item IoT \& Application development
+		\item LS Genio Mash-up
+		\item Streaming data visualization
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{IoT \& Application development}
+	\begin{itemize}
+		\item Industria 4.0 in Logical System (Jesi) nel dominio delle aziende manifatturiere
+		\item Monitoraggio delle macchine utensili in linea di produzione
+		\item Necessità di piattaforme di integrazione tra applicazioni e macchine utensili (PLC)
+		\item Studio e sviluppo di un mash-up per un interfacciamento trasparente tra applicazioni e PLC
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{IoT \& Application development}
+	\begin{itemize}
+		\item La vera potenzialità dell'IoT è la realizzazione delle sue applicazioni
+		\item Data collection dai devices (PLC)
 		\begin{itemize}
-			\item Piattaforma REST indipendente da sorgenti dati
-			\begin{itemize}
-				\item Autenticazione tramite token
-				\item Interfaccia web
-			\end{itemize}
-			\item Servizio di sottoscrizione "subscribe"
-			\begin{itemize}
-				\item Notifica dei messaggi PUSH
-			\end{itemize}
-			\item Integrazione dei servizi con NAV
-			\item Servizio di monitoraggio dei dati
-			\begin{itemize}
-				\item Controllo valore oltre soglia
-			\end{itemize}
+			\item Per l'analisi e l'apprendimento dell'environmental context (linea di produzione)
+			\item Schedulazione e pianificazione dei task
+			\item Aumento di qualità sia del prodotto finale che del processo produttivo
 		\end{itemize}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Architettura piattaforma}
-\includegraphics[width=0.9\textwidth]{images/architettura_piattaforma.png}
+	\frametitle{LS Genio Mash-up}
+	\begin{itemize}
+		\item Il mash-up indica un mix di codice, sistemi, tecnologie diverse che vengono integrate dinamicamente per creare un nuovo tipo di servizio o applicazione
+		\item LS Mash-up: integrazione di diversi componenti per la creazione di una piattaforma di integrazione tra applicazioni e PLC.
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Struttura tabelle backend}
-\includegraphics[width=1\textwidth]{images/tabelle-backend.png}
+\frametitle{LS Genio Mash-up}
+\framesubtitle{Idea Architetturale}
+%\textbf{Idea Architetturale} 
+\begin{columns}[T] % align columns
+	\begin{column}{.52\textwidth}
+		\begin{itemize}
+			\item Architettura orientata ai servizi REST
+			\item Interfacce di comunicazione ben definite (JSON-ISO 19156:2011) 
+			\item Subscribe per l'event listening (MOM ActiveMQ)
+			\item Gestione della semantica delle misurazioni
+			\item Architettura n-tier 
+		\end{itemize}
+	\end{column}%
+	\hfill%
+	\begin{column}{.48\textwidth}
+		\includegraphics[width=0.9\textwidth]{images/architettura_piattaforma.png}
+	\end{column}%
+\end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{Pagina web per la richiesta di abilitazione}
-\includegraphics[width=1\textwidth]{images/RequestPagePlatform.png}
+	\frametitle{LS Genio Mash-up}
+	\framesubtitle{Interoperabilità tramite servizi REST}
+	\begin{columns}[T] % align columns
+		\begin{column}{.4\textwidth}
+			\begin{itemize}
+				{\tiny
+					\item API tramite servizi REST
+					\item Servizi disponibili
+					\begin{itemize}
+						\tiny
+						\item getlastmeasure
+						\item getmeasurefromto
+						\item getdetailedmeasurefromto
+						\item getmeasurelastmonth
+						\item getmeasurelastweek
+						\item getdetailedmeasurelastmonth
+						\item getdetailedmeasurelastweek
+						\item getallplc
+						\item sensordatafromfields
+						\item subscribe
+						\item unsubscribe
+					\end{itemize}
+				}
+			\end{itemize}
+			
+		\end{column}%
+		\hfill%
+		\begin{column}{.56\textwidth}
+			\includegraphics[width=1\textwidth]{images/interoperabilita-rest.png}
+		\end{column}%
+	\end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{Pagina web catalogo Smart Object}
-\includegraphics[width=1\textwidth]{images/SmartObjectsPlatform.png}
-\end{frame}
-
-\begin{frame}
-\frametitle{Esempio di un servizio - getlastmeasure}
+\frametitle{LS Genio Mash-up}
+\framesubtitle{Esempio di un servizio - getlastmeasure}
 \includegraphics[width=1\textwidth]{images/getlastmeasure.png}
 \end{frame}
 
 \begin{frame}
-\frametitle{Valori di ritorno di getlastmeasure}
-\includegraphics[width=0.8\textwidth]{images/Postman1-corretto.png}
+\frametitle{LS Genio Mash-up}
+\framesubtitle{Valori di ritorno di getlastmeasure}
+\begin{columns}[T] % align columns
+\begin{column}{.38\textwidth}
+	\begin{itemize}
+		\small
+		\item Utilizzo di ontologie per dare semantica ai messaggi, secondo lo standard ISO 19156:2011
+	\end{itemize}
+	
+\end{column}%
+\hfill%
+\begin{column}{.58\textwidth}
+	\includegraphics[width=1\textwidth]{images/Postman1-corretto.png}
+\end{column}%
+\end{columns}
+
 \end{frame}
 
 \begin{frame}
-\frametitle{Subscribe Rule di una applicazione}
-\includegraphics[width=0.6\textwidth]{images/subscribe-json-1.png}
+	\frametitle{LS Genio Mash-up}
+	\framesubtitle{Schema servizio subscribe}
+	\begin{columns}[T] % align columns
+		\begin{column}{.38\textwidth}
+			\begin{itemize}
+				\small
+				\item Invio della regola di subscribe
+				\item Un thread gestisce una regola
+				\item Invio dei dati in ActiveMQ quando si verifica l'evento
+				
+			\end{itemize}
+			
+		\end{column}%
+		\hfill%
+		\begin{column}{.60\textwidth}
+			\includegraphics[width=1\textwidth]{images/schema-subscribe.png}
+		\end{column}%
+	\end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{Albero della condition}
-\includegraphics[width=1\textwidth]{images/strutturaquerytree.png}
+	\frametitle{LS Genio Mash-up}
+	\framesubtitle{Esempio messaggio di subscribe}
+	\begin{columns}[T] % align columns
+		\begin{column}{.38\textwidth}
+			\begin{itemize}
+				\item Regola di subscribe
+				\begin{itemize}
+					\item Campi del database
+					\item Intervallo CRON
+					\item Clausola where
+				\end{itemize}
+			\end{itemize}
+			
+		\end{column}%
+		\hfill%
+		\begin{column}{.58\textwidth}
+			\includegraphics[width=1\textwidth]{images/subscribe-json-1.png}
+		\end{column}%
+	\end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{Class Diagram SubscribeRuleInterface}
-\includegraphics[width=1\textwidth]{images/figura10.png}
+	\frametitle{LS Genio Mash-up}
+	\framesubtitle{Albero della condition}
+	\begin{columns}[T] % align columns
+		\begin{column}{.26\textwidth}
+			\begin{itemize}
+				\tiny
+				\item Suddivide la where in diversi componenti
+				\begin{itemize}
+					\tiny
+					\item Operatori logici binari
+					\item Operatori che si applicano a sotto-query
+					\item Semplici operazioni
+				\end{itemize}
+				
+			\end{itemize}
+			
+		\end{column}%
+		\hfill%
+		\begin{column}{.7\textwidth}
+			\includegraphics[width=1\textwidth]{images/strutturaquerytree.png}
+		\end{column}%
+	\end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{Class Diagram RetrievedDataInterface}
-\includegraphics[width=1\textwidth]{images/ClassDiagram1.png}
+	\frametitle{LS Genio Mash-up}
+	\framesubtitle{Gestione (GUI)}
+	\begin{columns}[T] % align columns
+		\begin{column}{.3\textwidth}
+			
+				\begin{itemize}
+					{\tiny
+				\item \textbf{Interfaccia web richiesta abilitazione}
+				
+				\begin{itemize}
+					{\tiny
+					\item L'utente specifica applicazione, username e password
+					\item Servizi che vuole utilizzare
+				}
+				\end{itemize}
+				
+				\item Interfaccia web catalogo Smart Object
+				\item Interfaccia web gestione richieste
+				\item Interfaccia web gestione servizi utenti
+				%\item Interfaccia web per il real time monitoring
+				%\item Interfaccia web per la gestione della soglia
+			}
+			\end{itemize}
+		
+		\end{column}%
+		\hfill%
+		\begin{column}{.66\textwidth}
+			\includegraphics[width=0.9\textwidth]{images/RequestPagePlatform.png}
+		\end{column}%
+	\end{columns}
+\end{frame}
+
+\begin{frame}[noframenumbering]
+\frametitle{LS Genio Mash-up}
+\framesubtitle{Gestione (GUI)}
+\begin{columns}[T] % align columns
+	\begin{column}{.3\textwidth}
+		
+		\begin{itemize}
+			{\tiny
+			\item Interfaccia web richiesta abilitazione
+			\item \textbf{Interfaccia web catalogo Smart Object}
+			
+			\begin{itemize}
+				{\tiny
+				\item Permette agli utenti di informarsi sulle chiamate dei servizi
+				\item Descrive la misura rappresentata dai campi della tabella in Genio
+				}
+			\end{itemize}
+			
+			\item Interfaccia web gestione richieste
+			\item Interfaccia web gestione servizi utenti
+			%\item Interfaccia web per il real time monitoring
+			%\item Interfaccia web per la gestione della soglia
+			}
+		\end{itemize}
+	
+	\end{column}%
+	\hfill%
+	\begin{column}{.66\textwidth}
+		\includegraphics[width=0.9\textwidth]{images/SmartObjectsPlatform.png}
+	\end{column}%
+\end{columns}
+\end{frame}
+
+\begin{frame}[noframenumbering]
+\frametitle{LS Genio Mash-up}
+\framesubtitle{Gestione (GUI)}
+\begin{columns}[T] % align columns
+	\begin{column}{.3\textwidth}
+		
+		\begin{itemize}
+			{\tiny
+			\item Interfaccia web richiesta abilitazione
+			\item Interfaccia web catalogo Smart Object
+			\item \textbf{Interfaccia web gestione richieste}
+			
+			\begin{itemize}
+				{\tiny
+				\item Gli amministratori accettano o rifiutano richieste
+				\item Viene generato il token che abilita l'uso dei servizi per quella applicazione
+				}
+			\end{itemize}
+			
+			\item Interfaccia web gestione servizi utenti
+			%\item Interfaccia web per il real time monitoring
+			%\item Interfaccia web per la gestione della soglia
+		}
+		\end{itemize}
+	
+	\end{column}%
+	\hfill%
+	\begin{column}{.66\textwidth}
+		\includegraphics[width=0.9\textwidth]{images/managePagePlatform.png}
+	\end{column}%
+\end{columns}
+\end{frame}
+
+\begin{frame}[noframenumbering]
+\frametitle{LS Genio Mash-up}
+\framesubtitle{Gestione (GUI)}
+\begin{columns}[T] % align columns
+	\begin{column}{.3\textwidth}
+		
+		\begin{itemize}
+			{\tiny
+			\item Interfaccia web richiesta abilitazione
+			\item Interfaccia web catalogo Smart Object
+			\item Interfaccia web gestione richieste
+			\item \textbf{Interfaccia web gestione servizi utenti}
+			
+			\begin{itemize}
+				{\tiny
+				\item Servizi attualmente attivi
+				\item Attivazione di nuovi servizi
+				\item Simulatore per il real time monitoring
+				}
+			\end{itemize}
+			%\item Interfaccia web per il real time monitoring
+			%\item Interfaccia web per la gestione della soglia
+			}
+		\end{itemize}
+	
+	\end{column}%
+	\hfill%
+	\begin{column}{.66\textwidth}
+		\includegraphics[width=0.9\textwidth]{images/UserSubscriptionsPlatform.png}
+	\end{column}%
+\end{columns}
+\end{frame}
+
+
+
+%\begin{frame}
+%\frametitle{Class Diagram SubscribeRuleInterface}
+%\includegraphics[width=1\textwidth]{images/figura10.png}
+%\end{frame}
+
+%\begin{frame}
+%\frametitle{Class Diagram RetrievedDataInterface}
+%\includegraphics[width=1\textwidth]{images/ClassDiagram1.png}
+%\end{frame}
+
+%\begin{frame}
+%\frametitle{Class Diagram AnnotationInterface}
+%\includegraphics[width=1\textwidth]{images/annotationinterface.png}
+%\end{frame}
+
+%\begin{frame}
+%\frametitle{Interfacce e classi astratte}
+%\begin{columns}[T] % align columns
+%	\begin{column}{.38\textwidth}
+%		
+%		
+%	\end{column}%
+%	\hfill%
+%	\begin{column}{.58\textwidth}
+%		\includegraphics[width=1\textwidth]{images/classe-astratta.png}
+%	\end{column}%
+%\end{columns}
+%
+%\end{frame}
+
+\begin{frame}
+\frametitle{LS Genio Mash-up}
+	\framesubtitle{Apache Avro}
+	\begin{itemize}
+		\item Avro: framework di serializzazione per l'interoperabilità dei dati
+		\item Code generation per la gestione dei JSON
+		\item Impossibilità di inviare o ricevere messaggi malformati
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Class Diagram AnnotationInterface}
-\includegraphics[width=1\textwidth]{images/annotationinterface.png}
-\end{frame}
-
-\begin{frame}
-\frametitle{Class Diagram AbstractConnection}
-\includegraphics[width=1\textwidth]{images/main.png}
-\end{frame}
-
-\begin{frame}
-\frametitle{Schema Avro SensorData}
+\frametitle{LS Genio Mash-up}
+\framesubtitle{Schema Avro SensorData}
 \begin{figure}%
 	\centering
 	\subfloat{{\includegraphics[width=5cm]{images/sensordata1.png} }}%
@@ -110,7 +393,8 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Schema Avro SensorDataAnnotation}
+\frametitle{LS Genio Mash-up}
+\framesubtitle{Schema Avro SensorDataAnnotation}
 \begin{figure}%
 	\centering
 	\subfloat{{\includegraphics[width=5cm]{images/annotazione-non-avro.png} }}%
@@ -122,12 +406,46 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Pagina web per il grafico}
-\includegraphics[width=1\textwidth]{images/grafico-zk.png}
+\frametitle{Streaming data visualization}
+\framesubtitle{Interfaccia web per il real time monitoring}
+\begin{columns}[T] % align columns
+	\begin{column}{.3\textwidth}
+		\begin{itemize}
+			\small
+			\item I dati che hanno una annotazione associata possono essere visualizzati
+			\item PLC e campo come parametri di selezione
+			\item Possibilità di avviare il controllo della soglia
+		\end{itemize}
+	\end{column}%
+	\hfill%
+	\begin{column}{.66\textwidth}
+		\includegraphics[width=1\textwidth]{images/grafico-zk.png}
+	\end{column}%
+\end{columns}
+
 \end{frame}
 
 \begin{frame}
-\frametitle{Codice Job Flink}
+\frametitle{Streaming data visualization}
+\framesubtitle{Interfaccia web per il monitoring della soglia}
+\begin{columns}[T] % align columns
+	\begin{column}{.3\textwidth}
+		\begin{itemize}
+			\item Tabella con il numero di volte che la soglia è stata superata
+			\item Ultima media registrata
+		\end{itemize}
+	\end{column}%
+	\hfill%
+	\begin{column}{.66\textwidth}
+		\includegraphics[width=1\textwidth]{images/pagina-monitoraggio-web.png}
+	\end{column}%
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Streaming data visualization}
+\framesubtitle{Codice Job Flink}
 \includegraphics[width=1\textwidth]{images/flink-job.png}
 \end{frame}
 
